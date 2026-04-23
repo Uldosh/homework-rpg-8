@@ -91,22 +91,9 @@ public abstract class TowerFloor {
      */
     protected abstract void awardLoot(List<Hero> party, FloorResult result);
 
-    /**
-     * Cleans up after the floor (restore state, remove temporary effects, etc.).
-     * Default implementation is a no-op; subclasses may override if needed.
-     * This is a hook — it has a default implementation and is not abstract.
-     *
-     * @param party the heroes after the floor has been explored
-     */
     protected void cleanup(List<Hero> party) {
         // Default: no cleanup needed
     }
 
-    /**
-     * Returns the name of this floor (e.g., "Skeleton Crypt", "Poison Trap", "Dragon's Lair").
-     * Subclasses must implement this.
-     *
-     * @return the floor's name
-     */
     protected abstract String getFloorName();
 }
